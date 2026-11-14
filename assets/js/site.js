@@ -1,4 +1,4 @@
-/* Aureole homepage behaviour: language switching, links, comments. */
+/* Aureole homepage behaviour: language switching and links. */
 (function () {
   var CFG = window.AUREOLE || {};
   var I18N = window.AUREOLE_I18N || {};
@@ -101,7 +101,6 @@
       releases: base + "/releases",
       repo: base,
       issues: base + "/issues",
-      discussions: base + "/discussions",
       docs: "docs.html"
     };
 
@@ -116,97 +115,23 @@
     if (year) year.textContent = "2026";
   }
 
-  var GISCUS_LANG = {
-    zh_CN: "zh-CN", zh_TW: "zh-TW", pt_BR: "pt", nb_NO: "nb"
-  };
-
-  function mountComments() {
-    var host = document.getElementById("comments");
-    if (!host || !CFG.giscus) return;
-    var g = CFG.giscus;
-    var configured = g.repoId && g.repoId.indexOf("REPLACE") !== 0 &&
-                     g.categoryId && g.categoryId.indexOf("REPLACE") !== 0 &&
-                     g.repo && g.repo.indexOf("YOUR_GITHUB_NAME") !== 0;
-
-    host.innerHTML = "";
-    if (!configured) {
-      var note = document.createElement("p");
-      note.className = "comments-note";
-      note.setAttribute("data-i18n", "cm.pending");
-      note.textContent = t(currentLang(), "cm.pending");
-      host.appendChild(note);
-      return;
-    }
-
-    loadGiscus(host, g, 0);
-  }
-
-  // giscus.app is occasionally unreachable from mainland networks. Retry twice,
-  // then leave a direct link so the thread can still be read and answered.
-  function loadGiscus(host, g, attempt) {
-    var script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    var code = currentLang();
-    var lang = GISCUS_LANG[code] || code.split("_")[0].toLowerCase();
-    script.setAttribute("data-repo", g.repo);
-    script.setAttribute("data-repo-id", g.repoId);
-    script.setAttribute("data-category", g.category || "Announcements");
-    script.setAttribute("data-category-id", g.categoryId);
-    script.setAttribute("data-mapping", "pathname");
-    script.setAttribute("data-strict", "0");
-    script.setAttribute("data-reactions-enabled", "1");
-    script.setAttribute("data-emit-metadata", "0");
-    script.setAttribute("data-input-position", "top");
-    script.setAttribute("data-theme", "transparent_dark");
-    script.setAttribute("data-lang", lang);
-    script.setAttribute("data-loading", "lazy");
-    host.appendChild(script);
-
-    setTimeout(function () {
-      if (host.querySelector("iframe")) return;
-      var old = host.querySelector('script[src^="https://giscus.app/client.js"]');
-      if (old) old.parentNode.removeChild(old);
-      if (attempt < 1) {
-        loadGiscus(host, g, attempt + 1);
-        return;
-      }
-      host.innerHTML = "";
-      var note = document.createElement("p");
-      note.className = "comments-note";
-      var link = document.createElement("a");
-      link.href = "https://github.com/" + (CFG.owner || "") + "/" +
-                  (CFG.repo || "aureole") + "/discussions";
-      link.textContent = "GitHub Discussions ↗";
-      note.appendChild(link);
-      host.appendChild(note);
-    }, 5000);
-  }
-
   var active = FALLBACK;
 
-  function currentLang() {
-    return active;
-  }
-
-  function setLang(code, mount) {
+  function setLang(code) {
     active = (findLang(code) || findLang(FALLBACK)).code;
     apply(active);
-    if (mount) mountComments();
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     var select = document.getElementById("lang-select");
     if (select) buildSelect(select);
 
-    setLang(detect(), false);
+    setLang(detect());
     applyLinks();
-    mountComments();
 
     if (select) {
       select.addEventListener("change", function () {
-        setLang(select.value, true);
+        setLang(select.value);
       });
     }
   });

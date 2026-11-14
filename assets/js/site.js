@@ -137,6 +137,12 @@
       return;
     }
 
+    loadGiscus(host, g, 0);
+  }
+
+  // giscus.app is occasionally unreachable from mainland networks. Retry twice,
+  // then leave a direct link so the thread can still be read and answered.
+  function loadGiscus(host, g, attempt) {
     var script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
     script.async = true;
@@ -156,6 +162,25 @@
     script.setAttribute("data-lang", lang);
     script.setAttribute("data-loading", "lazy");
     host.appendChild(script);
+
+    setTimeout(function () {
+      if (host.querySelector("iframe")) return;
+      var old = host.querySelector('script[src^="https://giscus.app/client.js"]');
+      if (old) old.parentNode.removeChild(old);
+      if (attempt < 2) {
+        loadGiscus(host, g, attempt + 1);
+        return;
+      }
+      host.innerHTML = "";
+      var note = document.createElement("p");
+      note.className = "comments-note";
+      var link = document.createElement("a");
+      link.href = "https://github.com/" + (CFG.owner || "") + "/" +
+                  (CFG.repo || "aureole") + "/discussions";
+      link.textContent = "GitHub Discussions ↗";
+      note.appendChild(link);
+      host.appendChild(note);
+    }, 6000);
   }
 
   var active = FALLBACK;

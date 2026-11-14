@@ -402,6 +402,8 @@ img { max-width: 100%; display: block; }
   padding: 18px 4px;
 }
 
+.comments-alt { padding: 10px 4px 0; }
+
 .giscus, .giscus-frame { width: 100%; }
 
 /* Footer */

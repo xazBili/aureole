@@ -101,6 +101,7 @@
       releases: base + "/releases",
       repo: base,
       issues: base + "/issues",
+      discussions: base + "/discussions",
       docs: "docs.html"
     };
 
@@ -167,7 +168,7 @@
       if (host.querySelector("iframe")) return;
       var old = host.querySelector('script[src^="https://giscus.app/client.js"]');
       if (old) old.parentNode.removeChild(old);
-      if (attempt < 2) {
+      if (attempt < 1) {
         loadGiscus(host, g, attempt + 1);
         return;
       }
@@ -180,7 +181,7 @@
       link.textContent = "GitHub Discussions ↗";
       note.appendChild(link);
       host.appendChild(note);
-    }, 6000);
+    }, 5000);
   }
 
   var active = FALLBACK;

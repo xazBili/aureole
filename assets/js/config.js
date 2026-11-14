@@ -16,8 +16,8 @@ window.AUREOLE = {
   downloadFile: "downloads/AureoleSetup-1.1.0.exe",
   giscus: {
     repo: "xazBili/aureole",
-    repoId: "R_kgDOVuDW6A",
+    repoId: "R_kgDOVuECxg",
     category: "Announcements",
-    categoryId: "DIC_kwDOVuDW6M4DLG53"
+    categoryId: "DIC_kwDOVuECxs4DLG8H"
   }
 };

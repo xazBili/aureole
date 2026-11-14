@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aureole · A Python editor for Windows</title>
+<meta name="description" content="Aureole is a native Windows editor built with Qt. One 14.4 MB setup file, no Electron layer, no account, no telemetry.">
+<meta name="theme-color" content="#0b0c14">
+<link rel="icon" href="assets/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aureole · A Python editor for Windows">
+<meta property="og:description" content="Native Qt editor for Windows. Tabs, file tree, terminal, pdb debugging and 41 interface languages.">
+<meta property="og:image" content="assets/img/editor.png">
+<link rel="stylesheet" href="assets/css/site.css?v=1.1.0">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/favicon.ico" alt="" width="26" height="26">
+      <span>Aureole</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="docs.html" data-i18n="nav.docs">Docs</a>
+      <a href="#download" data-i18n="nav.download">Download</a>
+      <a href="https://github.com/xazBili/aureole" data-link="repo" data-i18n="nav.github">GitHub</a>
+    </nav>
+    <div class="header-right">
+      <select id="lang-select" class="lang-select" aria-label="Language"></select>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <span class="kicker" data-i18n="hero.kicker">Windows 10 / 11 · x64 · 14.4 MB</span>
+    <h1 data-i18n="hero.title">A Python editor that opens before you let go of the mouse.</h1>
+    <p class="lead" data-i18n="hero.sub">Aureole is a native Windows editor built with Qt. One 14.4 MB setup file, no Electron layer, no account, no telemetry.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="downloads/AureoleSetup-1.1.0.exe" data-link="download" data-i18n="hero.download">Download for Windows</a>
+      <a class="btn btn-ghost" href="docs.html" data-link="docs" data-i18n="hero.docs">Read the docs</a>
+    </div>
+
+    <figure class="shot">
+      <img src="assets/img/editor.png" alt="Aureole editor showing a Python file with the sidebar, minimap and status bar." width="1024" height="548" loading="lazy">
+      <figcaption data-i18n="shot.caption">Midnight theme, demo project. The minimap, terminal and file tree all sit in the same window.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section wrap" id="features">
+    <div class="section-head">
+      <h2 data-i18n="feat.title">What is already in the box</h2>
+      <p data-i18n="feat.sub">There is no extension marketplace to browse. These come with the install.</p>
+    </div>
+
+    <div class="features">
+      <article class="card">
+        <span class="num">01</span>
+        <h3 data-i18n="f1.t">Tabs and a real file tree</h3>
+        <p data-i18n="f1.d">Open a folder and the sidebar lists what is inside it. Ctrl+PageUp and Ctrl+PageDown move between open files.</p>
+      </article>
+      <article class="card">
+        <span class="num">02</span>
+        <h3 data-i18n="f2.t">Run with Ctrl+F5</h3>
+        <p data-i18n="f2.d">Saves the current file, then runs python -u on it in the built-in terminal. Shift+F5 stops the run.</p>
+      </article>
+      <article class="card">
+        <span class="num">03</span>
+        <h3 data-i18n="f3.t">Debug with pdb</h3>
+        <p data-i18n="f3.d">F9 sets a breakpoint, F5 starts the debugger, F10 and F11 step over and into. The prompt stays visible.</p>
+      </article>
+      <article class="card">
+        <span class="num">04</span>
+        <h3 data-i18n="f4.t">Terminal in the same window</h3>
+        <p data-i18n="f4.d">Ctrl+` opens PowerShell in the folder you opened. Type there, or let the editor reuse it when you run a file.</p>
+      </article>
+      <article class="card">
+        <span class="num">05</span>
+        <h3 data-i18n="f5.t">Find and replace that keeps up</h3>
+        <p data-i18n="f5.d">Ctrl+F for find, Ctrl+H for replace, F3 for the next match. Ctrl+Enter replaces every match at once.</p>
+      </article>
+      <article class="card">
+        <span class="num">06</span>
+        <h3 data-i18n="f6.t">41 interface languages</h3>
+        <p data-i18n="f6.d">Arabic, Chinese, Japanese, Thai, Urdu and 36 more. Right-to-left layout is supported. Change it in Settings, then restart once.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="download" style="padding-top: 10px;">
+    <div class="download">
+      <div>
+        <h2 data-i18n="dl.title">Download Aureole 1.1.0</h2>
+        <p data-i18n="dl.sub">Runs on 64-bit Windows 10 (1809 or newer) and Windows 11. The installer does not ask for administrator rights.</p>
+        <p class="note" data-i18n="dl.note">The build is not code-signed. If Windows says "Windows protected your PC", click More info, then Run anyway.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="downloads/AureoleSetup-1.1.0.exe" data-link="download" data-i18n="dl.button">Download the installer</a>
+        <a class="alt-link" href="https://github.com/xazBili/aureole/releases" data-link="releases" data-i18n="dl.alt">See all releases on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section comments wrap" id="comments-section">
+    <div class="section-head">
+      <h2 data-i18n="cm.title">Comments</h2>
+      <p data-i18n="cm.sub">Sign in with GitHub to leave a note. Comments live in GitHub Discussions, not on this site.</p>
+    </div>
+    <div class="comments-box" id="comments">
+      <p class="comments-note" data-i18n="cm.pending">Comments are not connected yet. Add the repository ID and category ID in assets/js/config.js to switch them on.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><span data-i18n="foot.line">Made for people who write Python on Windows.</span> © <span id="year">2026</span> Aureole Studio.</p>
+    <div class="footer-links">
+      <a href="docs.html" data-link="docs" data-i18n="foot.docs">Documentation</a>
+      <a href="https://github.com/xazBili/aureole/releases" data-link="releases" data-i18n="foot.releases">Releases</a>
+      <a href="https://github.com/xazBili/aureole" data-link="repo" data-i18n="foot.repo">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n-core.js"></script>
+<script src="assets/js/i18n-1.js"></script>
+<script src="assets/js/i18n-2.js"></script>
+<script src="assets/js/i18n-3.js"></script>
+<script src="assets/js/i18n-4.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

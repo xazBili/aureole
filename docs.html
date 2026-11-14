@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aureole · 使用文档 / Documentation</title>
+<meta name="description" content="Aureole 安装、快捷键、设置、运行与调试、终端、文件关联和常见问题。Install, shortcuts, settings, debugging and FAQ.">
+<meta name="theme-color" content="#0b0c14">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/site.css?v=1.1.0">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/favicon.ico" alt="" width="26" height="26">
+      <span>Aureole</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="docs.html" aria-current="page">文档 / Docs</a>
+      <a href="index.html#download">下载 / Download</a>
+      <a href="https://github.com/xazBili/aureole">GitHub</a>
+    </nav>
+    <div class="header-right">
+      <a class="btn btn-ghost btn-sm" href="index.html#download">v1.1.0</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap docs-main">
+    <div class="docs-head">
+      <span class="kicker">Aureole 1.1.0</span>
+      <h1>
+        <span data-doc-lang="zh">使用文档</span>
+        <span data-doc-lang="en" hidden>Documentation</span>
+      </h1>
+      <p>
+        <span data-doc-lang="zh">从安装到调试的完整说明。先看前四节就能开始写代码，后面的内容遇到问题再查。</span>
+        <span data-doc-lang="en" hidden>Everything from installation to debugging. The first four sections are enough to start writing code; the rest is reference.</span>
+      </p>
+      <div class="docs-lang" role="group" aria-label="Documentation language">
+        <button type="button" data-doc-btn="zh">中文</button>
+        <button type="button" data-doc-btn="en">English</button>
+      </div>
+    </div>
+
+    <div class="docs-layout">
+      <aside class="toc" data-doc-lang="zh">
+        <strong>目录</strong>
+        <ol>
+          <li><a href="#zh-install">安装</a></li>
+          <li><a href="#zh-first">第一次打开</a></li>
+          <li><a href="#zh-keys">快捷键</a></li>
+          <li><a href="#zh-settings">设置</a></li>
+          <li><a href="#zh-run">运行与调试</a></li>
+          <li><a href="#zh-terminal">内置终端</a></li>
+          <li><a href="#zh-shell">右键菜单与文件关联</a></li>
+          <li><a href="#zh-language">界面语言</a></li>
+          <li><a href="#zh-data">数据与位置</a></li>
+          <li><a href="#zh-faq">常见问题</a></li>
+        </ol>
+      </aside>
+
+      <aside class="toc" data-doc-lang="en" hidden>
+        <strong>Contents</strong>
+        <ol>
+          <li><a href="#en-install">Install</a></li>
+          <li><a href="#en-first">First run</a></li>
+          <li><a href="#en-keys">Shortcuts</a></li>
+          <li><a href="#en-settings">Settings</a></li>
+          <li><a href="#en-run">Run and debug</a></li>
+          <li><a href="#en-terminal">Terminal</a></li>
+          <li><a href="#en-shell">Context menu and associations</a></li>
+          <li><a href="#en-language">Interface language</a></li>
+          <li><a href="#en-data">Files and registry</a></li>
+          <li><a href="#en-faq">FAQ</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body" data-doc-lang="zh">
+        <h2 id="zh-install">安装</h2>
+        <p>Aureole 1.1.0 的安装包是 <code>AureoleSetup-1.1.0.exe</code>，14.4 MB。系统要求是 64 位 Windows 10（1809 或更新）或 Windows 11。</p>
+        <ol>
+          <li>双击安装包。向导会先问安装位置，默认是 <code>%LOCALAPPDATA%\Programs\Aureole</code>。</li>
+          <li>按默认方式安装时不需要管理员权限，不会弹 UAC。只有选择“为所有用户安装”时才需要。</li>
+          <li>安装完成后从开始菜单启动 Aureole。</li>
+        </ol>
+        <div class="callout">安装包没有代码签名。如果 Windows 显示“Windows 已保护你的电脑”，点“更多信息”，再点“仍要运行”。</div>
+        <figure>
+          <img class="setup-shot" src="assets/img/setup.png" alt="Aureole 安装向导" width="699" height="530" loading="lazy">
+        </figure>
+        <h3>卸载</h3>
+        <p>打开“设置 → 应用 → 已安装的应用”，找到 Aureole，选择卸载。卸载会删除程序文件和安装时写入的右键菜单、文件关联；你的代码文件不会被删除。</p>
+
+        <h2 id="zh-first">第一次打开</h2>
+        <p>首次启动会看到欢迎页，上面有新建文件、打开文件、打开文件夹三个按钮，以及最近打开过的文件列表。</p>
+        <ul>
+          <li>点“打开文件夹”，选一个 Python 项目。左侧资源管理器会列出里面的文件，点文件名即可在新标签页打开。</li>
+          <li><kbd>Ctrl+S</kbd> 保存，<kbd>Ctrl+Shift+S</kbd> 另存为。标签页标题前的圆点表示有未保存的修改。</li>
+          <li>底部状态栏显示行号、列号、编码（默认 UTF-8）、缩进方式（空格或制表符）和当前语言。</li>
+          <li>默认会恢复上次关闭时打开的文件。不需要的话，在设置 → 常规里关掉“启动时恢复打开的文件”。</li>
+          <li>从资源管理器双击文件时，文件会交给已经运行的窗口，不会再多开一个 Aureole。</li>
+        </ul>
+
+        <h2 id="zh-keys">快捷键</h2>
+        <h3>文件</h3>
+        <table>
+          <thead><tr><th>操作</th><th>快捷键</th></tr></thead>
+          <tbody>
+            <tr><td>新建文件</td><td><kbd>Ctrl+N</kbd></td></tr>
+            <tr><td>打开文件</td><td><kbd>Ctrl+O</kbd></td></tr>
+            <tr><td>打开文件夹</td><td><kbd>Ctrl+Shift+O</kbd></td></tr>
+            <tr><td>保存</td><td><kbd>Ctrl+S</kbd></td></tr>
+            <tr><td>另存为</td><td><kbd>Ctrl+Shift+S</kbd></td></tr>
+            <tr><td>关闭标签页</td><td><kbd>Ctrl+W</kbd></td></tr>
+            <tr><td>设置</td><td><kbd>Ctrl+,</kbd></td></tr>
+            <tr><td>退出</td><td><kbd>Ctrl+Q</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h3>编辑</h3>
+        <table>
+          <thead><tr><th>操作</th><th>快捷键</th></tr></thead>
+          <tbody>
+            <tr><td>撤销 / 重做</td><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td></tr>
+            <tr><td>剪切 / 复制 / 粘贴</td><td><kbd>Ctrl+X</kbd> / <kbd>Ctrl+C</kbd> / <kbd>Ctrl+V</kbd></td></tr>
+            <tr><td>全选</td><td><kbd>Ctrl+A</kbd></td></tr>
+            <tr><td>查找</td><td><kbd>Ctrl+F</kbd></td></tr>
+            <tr><td>替换</td><td><kbd>Ctrl+H</kbd></td></tr>
+            <tr><td>下一个 / 上一个匹配</td><td><kbd>F3</kbd> / <kbd>Shift+F3</kbd></td></tr>
+            <tr><td>跳到行</td><td><kbd>Ctrl+G</kbd></td></tr>
+            <tr><td>切换注释</td><td><kbd>Ctrl+/</kbd></td></tr>
+            <tr><td>复制当前行</td><td><kbd>Ctrl+Shift+D</kbd></td></tr>
+            <tr><td>删除当前行</td><td><kbd>Ctrl+Shift+K</kbd></td></tr>
+            <tr><td>上移 / 下移当前行</td><td><kbd>Alt+Up</kbd> / <kbd>Alt+Down</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h3>视图</h3>
+        <table>
+          <thead><tr><th>操作</th><th>快捷键</th></tr></thead>
+          <tbody>
+            <tr><td>命令面板</td><td><kbd>Ctrl+Shift+P</kbd></td></tr>
+            <tr><td>显示 / 隐藏侧边栏</td><td><kbd>Ctrl+B</kbd></td></tr>
+            <tr><td>显示 / 隐藏终端</td><td><kbd>Ctrl+`</kbd></td></tr>
+            <tr><td>放大 / 缩小 / 重置字号</td><td><kbd>Ctrl+=</kbd> / <kbd>Ctrl+-</kbd> / <kbd>Ctrl+0</kbd></td></tr>
+            <tr><td>自动换行</td><td><kbd>Alt+Z</kbd></td></tr>
+            <tr><td>下一个 / 上一个标签页</td><td><kbd>Ctrl+PageDown</kbd> / <kbd>Ctrl+PageUp</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h3>运行与调试</h3>
+        <table>
+          <thead><tr><th>操作</th><th>快捷键</th></tr></thead>
+          <tbody>
+            <tr><td>运行（不调试）</td><td><kbd>Ctrl+F5</kbd></td></tr>
+            <tr><td>停止运行</td><td><kbd>Shift+F5</kbd></td></tr>
+            <tr><td>开始调试 / 继续</td><td><kbd>F5</kbd></td></tr>
+            <tr><td>切换断点</td><td><kbd>F9</kbd></td></tr>
+            <tr><td>单步跳过 / 单步进入</td><td><kbd>F10</kbd> / <kbd>F11</kbd></td></tr>
+            <tr><td>跳出函数</td><td><kbd>Shift+F11</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="zh-settings">设置</h2>
+        <p>按 <kbd>Ctrl+,</kbd> 打开设置。左侧是分类，顶部有搜索框，直接输入“字号”或“缩进”就能定位到对应项。</p>
+        <table>
+          <thead><tr><th>分类</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td>常规</td><td>界面语言（重启后生效）、启动时恢复打开的文件、崩溃恢复快照及间隔（10 到 120 秒，默认 20 秒）</td></tr>
+            <tr><td>外观</td><td>配色主题（Midnight、Monokai、Daylight）、编辑器字体</td></tr>
+            <tr><td>编辑器</td><td>字号、缩进宽度（2/4/8 空格）、Tab 插入空格、自动换行、显示缩略图、高亮当前行、缩进参考线、自动闭合括号和引号、光标宽度</td></tr>
+            <tr><td>文件</td><td>保存时删除行尾空格、保存时补最后一个换行、最近文件数量上限（设为 0 关闭）</td></tr>
+            <tr><td>终端</td><td>终端字号、回滚行数</td></tr>
+            <tr><td>资源管理器</td><td>文件夹右键菜单、默认文件关联、Aureole 文件图标</td></tr>
+          </tbody>
+        </table>
+        <p>除界面语言外，所有设置改完立即生效，不需要重启程序。</p>
+
+        <h2 id="zh-run">运行与调试</h2>
+        <p>运行和调试都调用系统的 <code>python</code>，所以先确认它已经加入 PATH。打开内置终端，输入：</p>
+        <pre><code>python --version</code></pre>
+        <p>能显示版本号就可以继续。提示“不是内部或外部命令”，说明需要重新安装 Python 并勾选“Add Python to PATH”。</p>
+
+        <h3>运行</h3>
+        <p>按 <kbd>Ctrl+F5</kbd>，编辑器会先保存当前文件，再在终端里执行 <code>python -u "文件路径"</code>。输出直接显示在内置终端里，按 <kbd>Shift+F5</kbd> 结束运行。</p>
+
+        <h3>调试</h3>
+        <p>按 <kbd>F9</kbd> 在光标所在行设置断点，再按 <kbd>F5</kbd> 启动调试。Aureole 调用的是标准库的 pdb，断点会在调试开始后自动下发，程序停在断点处。</p>
+        <ul>
+          <li><kbd>F5</kbd> 继续运行到下一个断点。</li>
+          <li><kbd>F10</kbd> 单步跳过，<kbd>F11</kbd> 单步进入，<kbd>Shift+F11</kbd> 跳出当前函数。</li>
+          <li>终端里可以直接输入 pdb 命令，例如 <code>p x</code> 查看变量、<code>l</code> 查看附近代码、<code>q</code> 退出。</li>
+          <li>调试期间编辑代码不会热更新，修改后需要停止并重新启动调试。</li>
+        </ul>
+        <div class="callout">目前只支持对当前标签页里的 Python 文件运行和调试。未保存的新文件会先提示保存。</div>
+
+        <h2 id="zh-terminal">内置终端</h2>
+        <p>按 <kbd>Ctrl+`</kbd> 打开或收起终端。启动的是 PowerShell，工作目录就是你当前打开的文件夹，所以可以直接运行 <code>git status</code>、<code>pip install</code> 之类的命令。</p>
+        <ul>
+          <li>“运行”菜单里有“清空终端”，只清屏，不结束当前进程。</li>
+          <li>按 <kbd>Ctrl+F5</kbd> 运行脚本时，编辑器复用这个终端，输出和你的手动命令在同一个窗口里。</li>
+          <li>停止运行会结束由这次运行启动的 python 进程树；终端本身继续可用。</li>
+        </ul>
+
+        <h2 id="zh-shell">右键菜单与文件关联</h2>
+        <p>在设置 → 资源管理器里有三个开关，默认开启：</p>
+        <ul>
+          <li><strong>文件夹右键菜单</strong>：在资源管理器中右键任意文件夹，多出“在 Aureole 中打开”。</li>
+          <li><strong>默认文件关联</strong>：让 .py、.md、.json 和常见文本文件默认用 Aureole 打开。</li>
+          <li><strong>Aureole 文件图标</strong>：给这些关联类型换成 Aureole 的图标。</li>
+        </ul>
+        <p>开关改完立即写入当前用户的注册表，不需要重启。想恢复原状，把开关关掉即可；卸载时也会清理安装时写入的项。</p>
+
+        <h2 id="zh-language">界面语言</h2>
+        <p>设置 → 常规 → 语言，共有 41 种界面语言。选好后需要重启 Aureole 一次才会应用。</p>
+        <ul>
+          <li>阿拉伯语、希伯来语、波斯语和乌尔都语会自动切换为从右到左的排版。</li>
+          <li>个别翻译缺项会回退显示英文，不影响使用。</li>
+          <li>语言只影响界面，不会改变代码文件的编码。</li>
+        </ul>
+
+        <h2 id="zh-data">数据与位置</h2>
+        <table>
+          <thead><tr><th>内容</th><th>位置</th></tr></thead>
+          <tbody>
+            <tr><td>设置、窗口状态、关联记录</td><td><code>HKEY_CURRENT_USER\Software\Aureole Studio\Aureole</code></td></tr>
+            <tr><td>崩溃恢复快照</td><td><code>%APPDATA%\Aureole Studio\Aureole\recovery</code></td></tr>
+          </tbody>
+        </table>
+        <p>Aureole 不联网，没有遥测，也不会检查更新。你的代码和输入内容不会离开本机。</p>
+
+        <h2 id="zh-faq">常见问题</h2>
+        <h3>按 Ctrl+F5 提示找不到 python</h3>
+        <p>Python 没有加入 PATH。重新运行 Python 安装程序，勾选“Add Python to PATH”，然后关掉 Aureole 再打开，让终端拿到新的环境变量。</p>
+        <h3>Windows 提示“已保护你的电脑”</h3>
+        <p>安装包没有购买代码签名证书。点“更多信息”，再点“仍要运行”即可。下载后可以核对文件大小是否为 14,407,822 字节。</p>
+        <h3>双击 .py 文件还是用记事本打开</h3>
+        <p>到设置 → 资源管理器，打开“默认文件关联”。如果仍然无效，在 Windows 的“设置 → 应用 → 默认应用”里按扩展名指定 Aureole。</p>
+        <h3>改了语言但没有变化</h3>
+        <p>语言在启动时加载，需要完全退出再打开。关闭所有 Aureole 窗口后重新启动即可。</p>
+        <h3>双击文件却开了第二个窗口</h3>
+        <p>1.1.0 起是单实例，第二次启动会把文件交给已运行的窗口。如果仍然多开，检查是否有旧版本仍在运行。</p>
+        <h3>怎么彻底清除 Aureole 的痕迹</h3>
+        <p>先正常卸载，再按需删除 <code>%APPDATA%\Aureole Studio</code> 和注册表项 <code>HKEY_CURRENT_USER\Software\Aureole Studio</code>。这两处只存设置和恢复快照，不存你的项目文件。</p>
+        <h3>有 macOS 或 Linux 版本吗</h3>
+        <p>没有。目前只有 Windows x64 安装包。</p>
+
+        <div class="docs-foot">
+          <span>最后更新 2026-11-14</span>
+          <a href="index.html">返回首页</a>
+        </div>
+      </article>
+
+      <article class="doc-body" data-doc-lang="en" hidden>
+        <h2 id="en-install">Install</h2>
+        <p>The installer is <code>AureoleSetup-1.1.0.exe</code>, 14.4 MB. Aureole runs on 64-bit Windows 10 (1809 or newer) and Windows 11.</p>
+        <ol>
+          <li>Run the installer. The wizard asks for a location; the default is <code>%LOCALAPPDATA%\Programs\Aureole</code>.</li>
+          <li>Installing for the current user does not need administrator rights and will not trigger a UAC prompt. Only the all-users option does.</li>
+          <li>Start Aureole from the Start menu when the wizard finishes.</li>
+        </ol>
+        <div class="callout">The build is not code-signed. If Windows shows "Windows protected your PC", click More info, then Run anyway.</div>
+        <figure>
+          <img class="setup-shot" src="assets/img/setup.png" alt="Aureole setup wizard" width="699" height="530" loading="lazy">
+        </figure>
+        <h3>Uninstall</h3>
+        <p>Open Settings → Apps → Installed apps, find Aureole and choose Uninstall. This removes the program files and the context-menu and file-association entries written during setup. Your source files are left alone.</p>
+
+        <h2 id="en-first">First run</h2>
+        <p>The welcome page has three buttons (new file, open file, open folder) and a list of recent files.</p>
+        <ul>
+          <li>Choose Open Folder and pick a Python project. The Explorer on the left lists the files; click one to open it in a new tab.</li>
+          <li><kbd>Ctrl+S</kbd> saves, <kbd>Ctrl+Shift+S</kbd> saves as. A dot before the tab title means there are unsaved changes.</li>
+          <li>The status bar shows the line, column, encoding (UTF-8 by default), indentation mode and the current language.</li>
+          <li>Files that were open at shutdown are restored by default. Turn that off under Settings → General if you prefer a clean start.</li>
+          <li>Opening a file from Explorer passes it to the running window instead of starting a second copy.</li>
+        </ul>
+
+        <h2 id="en-keys">Shortcuts</h2>
+        <h3>File</h3>
+        <table>
+          <thead><tr><th>Action</th><th>Shortcut</th></tr></thead>
+          <tbody>
+            <tr><td>New file</td><td><kbd>Ctrl+N</kbd></td></tr>
+            <tr><td>Open file</td><td><kbd>Ctrl+O</kbd></td></tr>
+            <tr><td>Open folder</td><td><kbd>Ctrl+Shift+O</kbd></td></tr>
+            <tr><td>Save</td><td><kbd>Ctrl+S</kbd></td></tr>
+            <tr><td>Save as</td><td><kbd>Ctrl+Shift+S</kbd></td></tr>
+            <tr><td>Close tab</td><td><kbd>Ctrl+W</kbd></td></tr>
+            <tr><td>Settings</td><td><kbd>Ctrl+,</kbd></td></tr>
+            <tr><td>Quit</td><td><kbd>Ctrl+Q</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Edit</h3>
+        <table>
+          <thead><tr><th>Action</th><th>Shortcut</th></tr></thead>
+          <tbody>
+            <tr><td>Undo / redo</td><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td></tr>
+            <tr><td>Cut / copy / paste</td><td><kbd>Ctrl+X</kbd> / <kbd>Ctrl+C</kbd> / <kbd>Ctrl+V</kbd></td></tr>
+            <tr><td>Select all</td><td><kbd>Ctrl+A</kbd></td></tr>
+            <tr><td>Find</td><td><kbd>Ctrl+F</kbd></td></tr>
+            <tr><td>Replace</td><td><kbd>Ctrl+H</kbd></td></tr>
+            <tr><td>Next / previous match</td><td><kbd>F3</kbd> / <kbd>Shift+F3</kbd></td></tr>
+            <tr><td>Go to line</td><td><kbd>Ctrl+G</kbd></td></tr>
+            <tr><td>Toggle comment</td><td><kbd>Ctrl+/</kbd></td></tr>
+            <tr><td>Duplicate line</td><td><kbd>Ctrl+Shift+D</kbd></td></tr>
+            <tr><td>Delete line</td><td><kbd>Ctrl+Shift+K</kbd></td></tr>
+            <tr><td>Move line up / down</td><td><kbd>Alt+Up</kbd> / <kbd>Alt+Down</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h3>View</h3>
+        <table>
+          <thead><tr><th>Action</th><th>Shortcut</th></tr></thead>
+          <tbody>
+            <tr><td>Command palette</td><td><kbd>Ctrl+Shift+P</kbd></td></tr>
+            <tr><td>Toggle sidebar</td><td><kbd>Ctrl+B</kbd></td></tr>
+            <tr><td>Toggle terminal</td><td><kbd>Ctrl+`</kbd></td></tr>
+            <tr><td>Zoom in / out / reset</td><td><kbd>Ctrl+=</kbd> / <kbd>Ctrl+-</kbd> / <kbd>Ctrl+0</kbd></td></tr>
+            <tr><td>Word wrap</td><td><kbd>Alt+Z</kbd></td></tr>
+            <tr><td>Next / previous tab</td><td><kbd>Ctrl+PageDown</kbd> / <kbd>Ctrl+PageUp</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Run and debug</h3>
+        <table>
+          <thead><tr><th>Action</th><th>Shortcut</th></tr></thead>
+          <tbody>
+            <tr><td>Run without debugging</td><td><kbd>Ctrl+F5</kbd></td></tr>
+            <tr><td>Stop</td><td><kbd>Shift+F5</kbd></td></tr>
+            <tr><td>Start debugging / continue</td><td><kbd>F5</kbd></td></tr>
+            <tr><td>Toggle breakpoint</td><td><kbd>F9</kbd></td></tr>
+            <tr><td>Step over / step into</td><td><kbd>F10</kbd> / <kbd>F11</kbd></td></tr>
+            <tr><td>Step out</td><td><kbd>Shift+F11</kbd></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="en-settings">Settings</h2>
+        <p><kbd>Ctrl+,</kbd> opens Settings. Categories are on the left, and the search box at the top finds a row by name, for example "font size" or "indent".</p>
+        <table>
+          <thead><tr><th>Section</th><th>Options</th></tr></thead>
+          <tbody>
+            <tr><td>General</td><td>Interface language (applies after a restart), restore open files on startup, crash recovery snapshots and interval (10 to 120 seconds, 20 by default)</td></tr>
+            <tr><td>Appearance</td><td>Color theme (Midnight, Monokai, Daylight), editor font family</td></tr>
+            <tr><td>Editor</td><td>Font size, indent width (2/4/8 spaces), insert spaces when pressing Tab, wrap long lines, show minimap, highlight current line, indentation guides, auto-close brackets and quotes, cursor width</td></tr>
+            <tr><td>Files</td><td>Trim trailing whitespace on save, insert a final newline, maximum recent files (0 disables the list)</td></tr>
+            <tr><td>Terminal</td><td>Terminal font size, scrollback lines</td></tr>
+            <tr><td>Explorer</td><td>Folder context menu, default file associations, Aureole file icons</td></tr>
+          </tbody>
+        </table>
+        <p>Everything except the interface language takes effect immediately. No restart needed.</p>
+
+        <h2 id="en-run">Run and debug</h2>
+        <p>Both commands call the system <code>python</code>, so it has to be on PATH. Open the terminal and check:</p>
+        <pre><code>python --version</code></pre>
+        <p>If that prints a version, you are set. If Windows reports that python is not recognized, reinstall Python with "Add Python to PATH" checked, then reopen Aureole so the terminal gets the new environment.</p>
+
+        <h3>Run</h3>
+        <p><kbd>Ctrl+F5</kbd> saves the current file and runs <code>python -u "path"</code> in the built-in terminal. Output appears there. <kbd>Shift+F5</kbd> stops the run.</p>
+
+        <h3>Debug</h3>
+        <p><kbd>F9</kbd> sets a breakpoint on the cursor line, then <kbd>F5</kbd> starts the debugger. Aureole runs the standard library pdb, sends the breakpoints once the prompt appears, and continues to the first one.</p>
+        <ul>
+          <li><kbd>F5</kbd> continues to the next breakpoint.</li>
+          <li><kbd>F10</kbd> steps over, <kbd>F11</kbd> steps into, <kbd>Shift+F11</kbd> steps out.</li>
+          <li>The terminal accepts pdb commands directly: <code>p x</code> prints a variable, <code>l</code> lists nearby code, <code>q</code> quits.</li>
+          <li>Editing code during a session does not hot-reload it. Stop and start the debugger again after changes.</li>
+        </ul>
+        <div class="callout">Run and debug work on the Python file in the current tab. A new unsaved file is saved first.</div>
+
+        <h2 id="en-terminal">Terminal</h2>
+        <p><kbd>Ctrl+`</kbd> shows or hides the terminal. It starts PowerShell in the folder you opened, so <code>git status</code> or <code>pip install</code> work without changing directory first.</p>
+        <ul>
+          <li>Run → Clear Terminal clears the screen without stopping the shell.</li>
+          <li>When you run a file, the editor reuses this terminal, so output and your own commands share one window.</li>
+          <li>Stopping a run ends the Python process tree started by that run. The terminal itself stays alive.</li>
+        </ul>
+
+        <h2 id="en-shell">Context menu and associations</h2>
+        <p>Settings → Explorer has three switches, all on by default:</p>
+        <ul>
+          <li><strong>Folder context menu</strong>: right-click any folder in Explorer and choose "Open in Aureole".</li>
+          <li><strong>Default file associations</strong>: open .py, .md, .json and common text files with Aureole by default.</li>
+          <li><strong>Aureole file icons</strong>: use Aureole icons for those types.</li>
+        </ul>
+        <p>Changes are written to the current user's registry immediately. Turn a switch off to revert it. Uninstalling also removes the entries created during setup.</p>
+
+        <h2 id="en-language">Interface language</h2>
+        <p>Settings → General → Language lists 41 interface languages. Restart Aureole once after changing it.</p>
+        <ul>
+          <li>Arabic, Hebrew, Persian and Urdu switch the layout to right-to-left automatically.</li>
+          <li>Missing translation keys fall back to English. Nothing breaks.</li>
+          <li>The language setting only affects the interface, not the encoding of your files.</li>
+        </ul>
+
+        <h2 id="en-data">Files and registry</h2>
+        <table>
+          <thead><tr><th>What</th><th>Where</th></tr></thead>
+          <tbody>
+            <tr><td>Settings, window state, association records</td><td><code>HKEY_CURRENT_USER\Software\Aureole Studio\Aureole</code></td></tr>
+            <tr><td>Crash recovery snapshots</td><td><code>%APPDATA%\Aureole Studio\Aureole\recovery</code></td></tr>
+          </tbody>
+        </table>
+        <p>Aureole makes no network requests. There is no telemetry and no update check. Your code and keystrokes stay on the machine.</p>
+
+        <h2 id="en-faq">FAQ</h2>
+        <h3>Ctrl+F5 says python was not found</h3>
+        <p>Python is not on PATH. Run the Python installer again, tick "Add Python to PATH", then close and reopen Aureole so the terminal picks up the new environment.</p>
+        <h3>Windows says it protected my PC</h3>
+        <p>The installer has no code-signing certificate. Click More info, then Run anyway. You can check the download is complete: the file should be exactly 14,407,822 bytes.</p>
+        <h3>.py files still open in Notepad</h3>
+        <p>Go to Settings → Explorer and enable default file associations. If Windows still ignores it, set Aureole per extension under Settings → Apps → Default apps.</p>
+        <h3>I changed the language but nothing happened</h3>
+        <p>The language is loaded at startup. Quit all Aureole windows and open it again.</p>
+        <h3>Opening a file started a second window</h3>
+        <p>Version 1.1.0 is single-instance: a second launch hands the file to the running window. If you still get two windows, an older build may be running.</p>
+        <h3>How do I remove every trace</h3>
+        <p>Uninstall normally, then optionally delete <code>%APPDATA%\Aureole Studio</code> and the registry key <code>HKEY_CURRENT_USER\Software\Aureole Studio</code>. Those hold settings and recovery snapshots only, never your project files.</p>
+        <h3>Is there a macOS or Linux build</h3>
+        <p>No. The only package right now is the Windows x64 installer.</p>
+
+        <div class="docs-foot">
+          <span>Last updated 2026-11-14</span>
+          <a href="index.html">Back to home</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span>2026</span> Aureole Studio.</p>
+    <div class="footer-links">
+      <a href="index.html">Aureole</a>
+      <a href="index.html#download">v1.1.0</a>
+      <a href="https://github.com/xazBili/aureole">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/docs.js"></script>
+</body>
+</html>

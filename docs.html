@@ -24,7 +24,7 @@
       <a href="https://github.com/xazBili/aureole">GitHub</a>
     </nav>
     <div class="header-right">
-      <a class="btn btn-ghost btn-sm" href="index.html#download">v1.1.0</a>
+      <a class="btn btn-ghost btn-sm" href="index.html#download">v2.0.0</a>
     </div>
   </div>
 </header>
@@ -32,7 +32,7 @@
 <main id="main">
   <section class="wrap docs-main">
     <div class="docs-head">
-      <span class="kicker">Aureole 1.1.0</span>
+      <span class="kicker">Aureole 2.0.0</span>
       <h1>
         <span data-doc-lang="zh">使用文档</span>
         <span data-doc-lang="en" hidden>Documentation</span>
@@ -54,6 +54,7 @@
           <li><a href="#zh-install">安装</a></li>
           <li><a href="#zh-first">第一次打开</a></li>
           <li><a href="#zh-keys">快捷键</a></li>
+          <li><a href="#zh-completion">智能补全</a></li>
           <li><a href="#zh-settings">设置</a></li>
           <li><a href="#zh-run">运行与调试</a></li>
           <li><a href="#zh-terminal">内置终端</a></li>
@@ -70,6 +71,7 @@
           <li><a href="#en-install">Install</a></li>
           <li><a href="#en-first">First run</a></li>
           <li><a href="#en-keys">Shortcuts</a></li>
+          <li><a href="#en-completion">Code completion</a></li>
           <li><a href="#en-settings">Settings</a></li>
           <li><a href="#en-run">Run and debug</a></li>
           <li><a href="#en-terminal">Terminal</a></li>
@@ -82,7 +84,7 @@
 
       <article class="doc-body" data-doc-lang="zh">
         <h2 id="zh-install">安装</h2>
-        <p>Aureole 1.1.0 的安装包是 <code>AureoleSetup-1.1.0.exe</code>，14.4 MB。系统要求是 64 位 Windows 10（1809 或更新）或 Windows 11。</p>
+        <p>Aureole 2.0.0 的安装包是 <code>AureoleSetup-2.0.0.exe</code>，14.6 MB。系统要求是 64 位 Windows 10（1809 或更新）或 Windows 11。</p>
         <ol>
           <li>双击安装包。向导会先问安装位置，默认是 <code>%LOCALAPPDATA%\Programs\Aureole</code>。</li>
           <li>按默认方式安装时不需要管理员权限，不会弹 UAC。只有选择“为所有用户安装”时才需要。</li>
@@ -136,6 +138,7 @@
             <tr><td>复制当前行</td><td><kbd>Ctrl+Shift+D</kbd></td></tr>
             <tr><td>删除当前行</td><td><kbd>Ctrl+Shift+K</kbd></td></tr>
             <tr><td>上移 / 下移当前行</td><td><kbd>Alt+Up</kbd> / <kbd>Alt+Down</kbd></td></tr>
+            <tr><td>触发补全</td><td><kbd>Ctrl+Space</kbd></td></tr>
           </tbody>
         </table>
 
@@ -165,6 +168,33 @@
           </tbody>
         </table>
 
+        <h2 id="zh-completion">智能补全</h2>
+        <p>2.0 起，编辑器在你输入时给出 Python 补全建议。所有数据都内置在程序里，不联网、不依赖语言服务器，安装包因此只增加了约 0.2 MB。</p>
+        <h3>触发方式</h3>
+        <ul>
+          <li>输入字母或点号时自动弹出建议（可在设置里关闭）。</li>
+          <li>任何时候按 <kbd>Ctrl+Space</kbd> 手动触发。</li>
+          <li>用方向键选择，<kbd>Enter</kbd> 或 <kbd>Tab</kbd> 确认；继续输入会过滤列表，按 <kbd>Esc</kbd> 关闭。</li>
+        </ul>
+        <h3>能补全什么</h3>
+        <ul>
+          <li><strong>点号成员</strong>：输入 <code>os.</code> 列出模块成员；<code>self.</code> 或 <code>cls.</code> 列出当前类里定义的方法和属性。对 <code>str</code>、<code>list</code>、<code>dict</code> 等 13 种常见类型，编辑器会从字面量推断类型并给出对应方法——例如 <code>s = "x"</code> 之后输入 <code>s.</code>，会列出 <code>upper</code>、<code>split</code> 等字符串方法。自己也定义的类同样适用：<code>f = Foo()</code> 之后输入 <code>f.</code>，会列出 <code>Foo</code> 的方法和属性。</li>
+          <li><strong>import</strong>：输入 <code>import </code> 时列出 82 个常见标准库模块；<code>from os import </code> 列出该模块的成员。已经 import 的模块可以直接用点号补全。</li>
+          <li><strong>内建与关键字</strong>：39 个关键字和 78 个内建函数、类型、异常随时可补。输入 <code>pri</code> 会出现 <code>print</code>，右侧标注它来自 builtins。</li>
+          <li><strong>代码片段</strong>：输入 <code>def</code>、<code>class</code>、<code>for</code>、<code>while</code>、<code>if</code>、<code>try</code>、<code>with</code>、<code>main</code> 时，候选里会多出标着 “snippet” 的条目。选中后插入模板，光标落在第一个占位符上，直接输入就能替换。</li>
+          <li><strong>当前文档里的名字</strong>：你自己定义的函数、类和变量也会出现在候选里，方便在文件别处引用。</li>
+        </ul>
+        <h3>参数提示</h3>
+        <p>输入左括号后，编辑器会在光标下方显示函数签名。例如 <code>print(</code> 会提示 <code>print(*args, sep=' ', end='\n', ...)</code>。内建函数和有签名记录的模块成员都支持。不需要时可在设置里关闭。</p>
+        <h3>相关设置</h3>
+        <p>在 设置 → 编辑器 里可以调整：</p>
+        <ul>
+          <li><strong>输入时自动显示建议</strong>：关掉后，只有按 <kbd>Ctrl+Space</kbd> 才会弹出补全。</li>
+          <li><strong>显示参数提示</strong>：控制左括号后的签名浮层。</li>
+          <li><strong>补全区分大小写</strong>：默认不区分，所以输入 <kbd>Print</kbd> 仍能匹配到 <code>print</code>。</li>
+        </ul>
+        <div class="callout">完整的点号、import 和类型推断补全只对 <code>.py</code> 文件启用；其他类型的文件仍按文档里已出现的词给出建议。分析结果带缓存，在上万行的文件里输入也不会卡顿。</div>
+
         <h2 id="zh-settings">设置</h2>
         <p>按 <kbd>Ctrl+,</kbd> 打开设置。左侧是分类，顶部有搜索框，直接输入“字号”或“缩进”就能定位到对应项。</p>
         <table>
@@ -172,7 +202,7 @@
           <tbody>
             <tr><td>常规</td><td>界面语言（重启后生效）、启动时恢复打开的文件、崩溃恢复快照及间隔（10 到 120 秒，默认 20 秒）</td></tr>
             <tr><td>外观</td><td>配色主题（Midnight、Monokai、Daylight）、编辑器字体</td></tr>
-            <tr><td>编辑器</td><td>字号、缩进宽度（2/4/8 空格）、Tab 插入空格、自动换行、显示缩略图、高亮当前行、缩进参考线、自动闭合括号和引号、光标宽度</td></tr>
+            <tr><td>编辑器</td><td>字号、缩进宽度（2/4/8 空格）、Tab 插入空格、自动换行、显示缩略图、高亮当前行、缩进参考线、自动闭合括号和引号、光标宽度、输入时自动显示补全建议、参数提示、补全区分大小写</td></tr>
             <tr><td>文件</td><td>保存时删除行尾空格、保存时补最后一个换行、最近文件数量上限（设为 0 关闭）</td></tr>
             <tr><td>终端</td><td>终端字号、回滚行数</td></tr>
             <tr><td>资源管理器</td><td>文件夹右键菜单、默认文件关联、Aureole 文件图标</td></tr>
@@ -237,7 +267,7 @@
         <h3>按 Ctrl+F5 提示找不到 python</h3>
         <p>Python 没有加入 PATH。重新运行 Python 安装程序，勾选“Add Python to PATH”，然后关掉 Aureole 再打开，让终端拿到新的环境变量。</p>
         <h3>Windows 提示“已保护你的电脑”</h3>
-        <p>安装包没有购买代码签名证书。点“更多信息”，再点“仍要运行”即可。下载后可以核对文件大小是否为 14,407,822 字节。</p>
+        <p>安装包没有购买代码签名证书。点“更多信息”，再点“仍要运行”即可。下载后可以核对文件大小是否为 14,611,698 字节。</p>
         <h3>双击 .py 文件还是用记事本打开</h3>
         <p>到设置 → 资源管理器，打开“默认文件关联”。如果仍然无效，在 Windows 的“设置 → 应用 → 默认应用”里按扩展名指定 Aureole。</p>
         <h3>改了语言但没有变化</h3>
@@ -250,14 +280,14 @@
         <p>没有。目前只有 Windows x64 安装包。</p>
 
         <div class="docs-foot">
-          <span>最后更新 2026-11-14</span>
+          <span>最后更新 2026-11-21</span>
           <a href="index.html">返回首页</a>
         </div>
       </article>
 
       <article class="doc-body" data-doc-lang="en" hidden>
         <h2 id="en-install">Install</h2>
-        <p>The installer is <code>AureoleSetup-1.1.0.exe</code>, 14.4 MB. Aureole runs on 64-bit Windows 10 (1809 or newer) and Windows 11.</p>
+        <p>The installer is <code>AureoleSetup-2.0.0.exe</code>, 14.6 MB. Aureole runs on 64-bit Windows 10 (1809 or newer) and Windows 11.</p>
         <ol>
           <li>Run the installer. The wizard asks for a location; the default is <code>%LOCALAPPDATA%\Programs\Aureole</code>.</li>
           <li>Installing for the current user does not need administrator rights and will not trigger a UAC prompt. Only the all-users option does.</li>
@@ -311,6 +341,7 @@
             <tr><td>Duplicate line</td><td><kbd>Ctrl+Shift+D</kbd></td></tr>
             <tr><td>Delete line</td><td><kbd>Ctrl+Shift+K</kbd></td></tr>
             <tr><td>Move line up / down</td><td><kbd>Alt+Up</kbd> / <kbd>Alt+Down</kbd></td></tr>
+            <tr><td>Trigger completion</td><td><kbd>Ctrl+Space</kbd></td></tr>
           </tbody>
         </table>
 
@@ -340,6 +371,33 @@
           </tbody>
         </table>
 
+        <h2 id="en-completion">Code completion</h2>
+        <p>Starting with 2.0, the editor suggests Python completions as you type. All of the data is built into the binary — no network, no language server — so the installer grows by only about 0.2 MB.</p>
+        <h3>How to trigger it</h3>
+        <ul>
+          <li>Suggestions pop up automatically as you type letters or a dot (turn it off in Settings).</li>
+          <li>Press <kbd>Ctrl+Space</kbd> to trigger them manually at any time.</li>
+          <li>Pick with the arrow keys and confirm with <kbd>Enter</kbd> or <kbd>Tab</kbd>. Keep typing to filter the list; press <kbd>Esc</kbd> to close it.</li>
+        </ul>
+        <h3>What gets completed</h3>
+        <ul>
+          <li><strong>Dot members</strong>: <code>os.</code> lists module members; <code>self.</code> or <code>cls.</code> lists the methods and attributes defined in the current class. For 13 common types such as <code>str</code>, <code>list</code> and <code>dict</code>, the editor infers the type from a literal and offers the right methods — after <code>s = "x"</code>, typing <code>s.</code> lists <code>upper</code>, <code>split</code> and other string methods. The same works for classes you define: after <code>f = Foo()</code>, typing <code>f.</code> lists <code>Foo</code>'s methods and attributes.</li>
+          <li><strong>import</strong>: typing <code>import </code> lists 82 common standard-library modules; <code>from os import </code> lists that module's members. A module you have imported can then be completed after a dot.</li>
+          <li><strong>Builtins and keywords</strong>: 39 keywords and 78 built-in functions, types and exceptions are always available. Type <code>pri</code> and <code>print</code> shows up, labelled as coming from builtins on the right.</li>
+          <li><strong>Snippets</strong>: typing <code>def</code>, <code>class</code>, <code>for</code>, <code>while</code>, <code>if</code>, <code>try</code>, <code>with</code> or <code>main</code> adds a "snippet" entry to the list. Selecting it inserts a template and leaves the cursor on the first placeholder — just type to replace it.</li>
+          <li><strong>Names in your document</strong>: your own functions, classes and variables appear in the suggestions, so you can reference them elsewhere in the file.</li>
+        </ul>
+        <h3>Parameter hints</h3>
+        <p>After you type an opening parenthesis, the function signature appears just below the cursor. For example, <code>print(</code> shows <code>print(*args, sep=' ', end='\n', ...)</code>. This works for built-in functions and module members with recorded signatures. Turn it off in Settings if you do not want it.</p>
+        <h3>Relevant settings</h3>
+        <p>Under Settings → Editor you can change:</p>
+        <ul>
+          <li><strong>Show suggestions while typing</strong>: when off, only <kbd>Ctrl+Space</kbd> opens the list.</li>
+          <li><strong>Show parameter hints</strong>: controls the signature popup after an opening parenthesis.</li>
+          <li><strong>Case-sensitive completion</strong>: off by default, so <kbd>Print</kbd> still matches <code>print</code>.</li>
+        </ul>
+        <div class="callout">Full dot, import and type-inference completion is enabled for <code>.py</code> files only. Other file types still get suggestions based on words already in the document. Analysis results are cached, so typing stays smooth even in files with tens of thousands of lines.</div>
+
         <h2 id="en-settings">Settings</h2>
         <p><kbd>Ctrl+,</kbd> opens Settings. Categories are on the left, and the search box at the top finds a row by name, for example "font size" or "indent".</p>
         <table>
@@ -347,7 +405,7 @@
           <tbody>
             <tr><td>General</td><td>Interface language (applies after a restart), restore open files on startup, crash recovery snapshots and interval (10 to 120 seconds, 20 by default)</td></tr>
             <tr><td>Appearance</td><td>Color theme (Midnight, Monokai, Daylight), editor font family</td></tr>
-            <tr><td>Editor</td><td>Font size, indent width (2/4/8 spaces), insert spaces when pressing Tab, wrap long lines, show minimap, highlight current line, indentation guides, auto-close brackets and quotes, cursor width</td></tr>
+            <tr><td>Editor</td><td>Font size, indent width (2/4/8 spaces), insert spaces when pressing Tab, wrap long lines, show minimap, highlight current line, indentation guides, auto-close brackets and quotes, cursor width, show suggestions while typing, parameter hints, case-sensitive completion</td></tr>
             <tr><td>Files</td><td>Trim trailing whitespace on save, insert a final newline, maximum recent files (0 disables the list)</td></tr>
             <tr><td>Terminal</td><td>Terminal font size, scrollback lines</td></tr>
             <tr><td>Explorer</td><td>Folder context menu, default file associations, Aureole file icons</td></tr>
@@ -412,7 +470,7 @@
         <h3>Ctrl+F5 says python was not found</h3>
         <p>Python is not on PATH. Run the Python installer again, tick "Add Python to PATH", then close and reopen Aureole so the terminal picks up the new environment.</p>
         <h3>Windows says it protected my PC</h3>
-        <p>The installer has no code-signing certificate. Click More info, then Run anyway. You can check the download is complete: the file should be exactly 14,407,822 bytes.</p>
+        <p>The installer has no code-signing certificate. Click More info, then Run anyway. You can check the download is complete: the file should be exactly 14,611,698 bytes.</p>
         <h3>.py files still open in Notepad</h3>
         <p>Go to Settings → Explorer and enable default file associations. If Windows still ignores it, set Aureole per extension under Settings → Apps → Default apps.</p>
         <h3>I changed the language but nothing happened</h3>
@@ -425,7 +483,7 @@
         <p>No. The only package right now is the Windows x64 installer.</p>
 
         <div class="docs-foot">
-          <span>Last updated 2026-11-14</span>
+          <span>Last updated 2026-11-21</span>
           <a href="index.html">Back to home</a>
         </div>
       </article>
@@ -438,7 +496,7 @@
     <p>© <span>2026</span> Aureole Studio.</p>
     <div class="footer-links">
       <a href="index.html">Aureole</a>
-      <a href="index.html#download">v1.1.0</a>
+      <a href="index.html#download">v2.0.0</a>
       <a href="https://github.com/xazBili/aureole">GitHub</a>
     </div>
   </div>

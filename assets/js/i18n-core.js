@@ -68,9 +68,9 @@
   window.AUREOLE_I18N = {
     en: pack([
       "Docs", "Download", "GitHub",
-      "Windows 10 / 11 · x64 · 14.4 MB",
+      "Windows 10 / 11 · x64 · 14.6 MB",
       "A Python editor that opens before you let go of the mouse.",
-      "Aureole is a native Windows editor built with Qt. One 14.4 MB setup file, no Electron layer, no account, no telemetry.",
+      "Aureole is a native Windows editor built with Qt. One 14.6 MB setup file, no Electron layer, no account, no telemetry.",
       "Download for Windows", "Read the docs",
       "Midnight theme, demo project. The minimap, terminal and file tree all sit in the same window.",
       "What is already in the box",
@@ -87,7 +87,7 @@
       "Ctrl+F for find, Ctrl+H for replace, F3 for the next match. Ctrl+Enter replaces every match at once.",
       "41 interface languages",
       "Arabic, Chinese, Japanese, Thai, Urdu and 36 more. Right-to-left layout is supported. Change it in Settings, then restart once.",
-      "Download Aureole 1.1.0",
+      "Download Aureole 2.0.0",
       "Runs on 64-bit Windows 10 (1809 or newer) and Windows 11. The installer does not ask for administrator rights.",
       "Download the installer", "See all releases on GitHub",
       "The build is not code-signed. If Windows says \"Windows protected your PC\", click More info, then Run anyway.",
@@ -100,9 +100,9 @@
 
     zh_CN: pack([
       "文档", "下载", "GitHub",
-      "Windows 10 / 11 · x64 · 14.4 MB",
+      "Windows 10 / 11 · x64 · 14.6 MB",
       "鼠标还没松开，编辑器已经打开。",
-      "Aureole 是用 Qt 写的原生 Windows 编辑器。一个 14.4 MB 的安装包，没有 Electron 外壳，不用登录，也不收集数据。",
+      "Aureole 是用 Qt 写的原生 Windows 编辑器。一个 14.6 MB 的安装包，没有 Electron 外壳，不用登录，也不收集数据。",
       "下载 Windows 版", "看使用文档",
       "Midnight 主题，演示项目。代码缩略图、终端和文件树都在同一个窗口里。",
       "装了就有这些",
@@ -119,7 +119,7 @@
       "Ctrl+F 查找，Ctrl+H 替换，F3 找下一个。Ctrl+Enter 一次替换全部。",
       "41 种界面语言",
       "阿拉伯语、中文、日语、泰语、乌尔都语，还有另外 36 种。支持从右到左排版。在设置里切换，重启一次生效。",
-      "下载 Aureole 1.1.0",
+      "下载 Aureole 2.0.0",
       "支持 64 位的 Windows 10（1809 及以上）和 Windows 11。安装过程不要求管理员权限。",
       "下载安装包", "在 GitHub 查看所有版本",
       "安装包没有代码签名。如果 Windows 提示“Windows 已保护你的电脑”，点“更多信息”，再点“仍要运行”。",
@@ -132,9 +132,9 @@
 
     zh_TW: pack([
       "文件", "下載", "GitHub",
-      "Windows 10 / 11 · x64 · 14.4 MB",
+      "Windows 10 / 11 · x64 · 14.6 MB",
       "滑鼠還沒放開，編輯器已經打開。",
-      "Aureole 是用 Qt 寫的原生 Windows 編輯器。一個 14.4 MB 的安裝檔，沒有 Electron 外層，不用登入，也不收集資料。",
+      "Aureole 是用 Qt 寫的原生 Windows 編輯器。一個 14.6 MB 的安裝檔，沒有 Electron 外層，不用登入，也不收集資料。",
       "下載 Windows 版", "看使用文件",
       "Midnight 主題，示範專案。程式碼縮圖、終端機和檔案樹都在同一個視窗裡。",
       "裝好就有這些",
@@ -151,7 +151,7 @@
       "Ctrl+F 尋找，Ctrl+H 取代，F3 找下一個。Ctrl+Enter 一次取代全部。",
       "41 種介面語言",
       "阿拉伯語、中文、日文、泰語、烏爾都語，還有另外 36 種。支援由右至左排版。在設定裡切換，重新啟動一次生效。",
-      "下載 Aureole 1.1.0",
+      "下載 Aureole 2.0.0",
       "支援 64 位元的 Windows 10（1809 以上）和 Windows 11。安裝過程不要求系統管理員權限。",
       "下載安裝檔", "在 GitHub 查看所有版本",
       "安裝檔沒有程式碼簽章。如果 Windows 顯示「Windows 已保護您的電腦」，點「更多資訊」，再點「仍要執行」。",

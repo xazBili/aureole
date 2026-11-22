@@ -10,9 +10,9 @@
 
   I.ar = pack([
     "الدليل", "تنزيل", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "محرر Python يفتح قبل أن ترفع يدك عن الفأرة.",
-    "Aureole محرر أصلي لنظام Windows مبني بـ Qt. ملف تثبيت واحد بحجم 14.6 MB، بلا طبقة Electron، بلا حساب، وبلا جمع بيانات.",
+    "Aureole محرر أصلي لنظام Windows مبني بـ Qt. ملف تثبيت واحد بحجم 14.5 MB، بلا طبقة Electron، بلا حساب، وبلا جمع بيانات.",
     "تنزيل لنظام Windows", "اقرأ الدليل",
     "سمة Midnight، مشروع تجريبي. الخريطة المصغرة والطرفية وشجرة الملفات في النافذة نفسها.",
     "ما تجده بعد التثبيت",
@@ -42,9 +42,9 @@
 
   I.bg = pack([
     "Документация", "Изтегляне", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Python редактор, който се отваря, преди да пуснете мишката.",
-    "Aureole е роден редактор за Windows, изграден с Qt. Един инсталатор от 14.6 MB, без Electron, без профил и без телеметрия.",
+    "Aureole е роден редактор за Windows, изграден с Qt. Един инсталатор от 14.5 MB, без Electron, без профил и без телеметрия.",
     "Изтегли за Windows", "Прочети документацията",
     "Тема Midnight, демо проект. Мини картата, терминалът и дървото на файловете са в един и същ прозорец.",
     "Какво има още в инсталатора",
@@ -74,9 +74,9 @@
 
   I.ca = pack([
     "Documentació", "Baixada", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Un editor de Python que s'obre abans que deixis anar el ratolí.",
-    "Aureole és un editor natiu de Windows fet amb Qt. Un sol instal·lador de 14.6 MB, sense capa Electron, sense compte i sense telemetria.",
+    "Aureole és un editor natiu de Windows fet amb Qt. Un sol instal·lador de 14.5 MB, sense capa Electron, sense compte i sense telemetria.",
     "Baixa per a Windows", "Llegeix la documentació",
     "Tema Midnight, projecte de demostració. El minimapa, la terminal i l'arbre de fitxers són a la mateixa finestra.",
     "Què hi ha dins la caixa",
@@ -106,9 +106,9 @@
 
   I.hr = pack([
     "Dokumentacija", "Preuzimanje", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Python editor koji se otvori prije nego što pustite miš.",
-    "Aureole je izvorni Windows editor napravljen s Qt-om. Jedan instalacijski paket od 14.6 MB, bez Electrona, bez računa i bez telemetrije.",
+    "Aureole je izvorni Windows editor napravljen s Qt-om. Jedan instalacijski paket od 14.5 MB, bez Electrona, bez računa i bez telemetrije.",
     "Preuzmi za Windows", "Pročitaj dokumentaciju",
     "Tema Midnight, demo projekt. Minikarta, terminal i stablo datoteka u istom su prozoru.",
     "Što već dolazi u paketu",
@@ -138,9 +138,9 @@
 
   I.cs = pack([
     "Dokumentace", "Stažení", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Editor Pythonu, který se otevře, než pustíte myš.",
-    "Aureole je nativní editor pro Windows postavený na Qt. Jeden instalační soubor o velikosti 14.6 MB, žádná vrstva Electron, žádný účet a žádná telemetrie.",
+    "Aureole je nativní editor pro Windows postavený na Qt. Jeden instalační soubor o velikosti 14.5 MB, žádná vrstva Electron, žádný účet a žádná telemetrie.",
     "Stáhnout pro Windows", "Přečíst dokumentaci",
     "Motiv Midnight, demo projekt. Miniatura kódu, terminál a strom souborů jsou ve stejném okně.",
     "Co už je součástí",
@@ -170,9 +170,9 @@
 
   I.da = pack([
     "Dokumentation", "Download", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "En Python-editor, der åbner, før du slipper musen.",
-    "Aureole er en native Windows-editor bygget med Qt. Én installationsfil på 14.6 MB, intet Electron-lag, ingen konto og ingen telemetri.",
+    "Aureole er en native Windows-editor bygget med Qt. Én installationsfil på 14.5 MB, intet Electron-lag, ingen konto og ingen telemetri.",
     "Download til Windows", "Læs dokumentationen",
     "Temaet Midnight, demoprojekt. Minikortet, terminalen og filtræet er i samme vindue.",
     "Det får du med",
@@ -202,9 +202,9 @@
 
   I.nl = pack([
     "Documentatie", "Download", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Een Python-editor die opent voordat je je muis loslaat.",
-    "Aureole is een native Windows-editor, gebouwd met Qt. Eén installatiebestand van 14.6 MB, geen Electron-laag, geen account en geen telemetrie.",
+    "Aureole is een native Windows-editor, gebouwd met Qt. Eén installatiebestand van 14.5 MB, geen Electron-laag, geen account en geen telemetrie.",
     "Download voor Windows", "Lees de documentatie",
     "Thema Midnight, demoproject. De minimap, terminal en bestandsboom staan in hetzelfde venster.",
     "Wat er al in zit",
@@ -234,9 +234,9 @@
 
   I.et = pack([
     "Dokumentatsioon", "Allalaadimine", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Pythoni redaktor, mis avaneb enne, kui hiirest lahti lased.",
-    "Aureole on Qt-ga tehtud natiivne Windowsi redaktor. Üks 14.6 MB paigaldusfail, Electroni kihti pole, kontot pole ja telemeetriat ei koguta.",
+    "Aureole on Qt-ga tehtud natiivne Windowsi redaktor. Üks 14.5 MB paigaldusfail, Electroni kihti pole, kontot pole ja telemeetriat ei koguta.",
     "Laadi alla Windowsile", "Loe dokumentatsiooni",
     "Midnighti teema, demoprojekt. Minikaart, terminal ja failipuu on samas aknas.",
     "Mis on juba kaasas",
@@ -266,9 +266,9 @@
 
   I.fi = pack([
     "Dokumentaatio", "Lataa", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Python-editori, joka ehtii aueta ennen kuin päästät hiirestä irti.",
-    "Aureole on Qt:lla tehty natiivi Windows-editori. Yksi 14.6 MB:n asennustiedosto, ei Electron-kerrosta, ei tiliä eikä telemetriaa.",
+    "Aureole on Qt:lla tehty natiivi Windows-editori. Yksi 14.5 MB:n asennustiedosto, ei Electron-kerrosta, ei tiliä eikä telemetriaa.",
     "Lataa Windowsille", "Lue dokumentaatio",
     "Midnight-teema, demoprojekti. Minikartta, pääte ja tiedostopuu ovat samassa ikkunassa.",
     "Mitä asennus sisältää",

@@ -91,7 +91,7 @@
   }
 
   function applyLinks() {
-    var version = CFG.version || "1.1.0";
+    var version = CFG.version || "2.0.0";
     var owner = CFG.owner || "YOUR_GITHUB_NAME";
     var repo = CFG.repo || "aureole";
     var base = "https://github.com/" + owner + "/" + repo;

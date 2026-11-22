@@ -5,8 +5,8 @@
  */
 window.AUREOLE = {
   version: "2.0.0",
-  size: "14.6 MB",
-  date: "2026-11-21",
+  size: "14.5 MB",
+  date: "2026-11-22",
   owner: "xazBili",
   repo: "aureole",
   siteUrl: "https://xazbili.github.io/aureole/",

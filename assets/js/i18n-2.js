@@ -10,9 +10,9 @@
 
   I.fr = pack([
     "Documentation", "Téléchargement", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Un éditeur Python qui s'ouvre avant que vous ne lâchiez la souris.",
-    "Aureole est un éditeur natif Windows écrit avec Qt. Un seul installateur de 14.6 Mo, pas de couche Electron, pas de compte, pas de télémétrie.",
+    "Aureole est un éditeur natif Windows écrit avec Qt. Un seul installateur de 14.5 Mo, pas de couche Electron, pas de compte, pas de télémétrie.",
     "Télécharger pour Windows", "Lire la documentation",
     "Thème Midnight, projet de démonstration. La minicarte, le terminal et l'arborescence sont dans la même fenêtre.",
     "Ce qui est déjà inclus",
@@ -42,9 +42,9 @@
 
   I.de = pack([
     "Dokumentation", "Download", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Ein Python-Editor, der offen ist, bevor Sie die Maus loslassen.",
-    "Aureole ist ein nativer Windows-Editor auf Qt-Basis. Eine 14.6 MB große Setup-Datei, keine Electron-Schicht, kein Konto, keine Telemetrie.",
+    "Aureole ist ein nativer Windows-Editor auf Qt-Basis. Eine 14.5 MB große Setup-Datei, keine Electron-Schicht, kein Konto, keine Telemetrie.",
     "Für Windows herunterladen", "Dokumentation lesen",
     "Midnight-Design, Demoprojekt. Minimap, Terminal und Dateibaum liegen im selben Fenster.",
     "Was schon dabei ist",
@@ -74,9 +74,9 @@
 
   I.el = pack([
     "Τεκμηρίωση", "Λήψη", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Ένας επεξεργαστής Python που ανοίγει πριν αφήσεις το ποντίκι.",
-    "Το Aureole είναι εγγενής επεξεργαστής για Windows, φτιαγμένος με Qt. Ένα αρχείο εγκατάστασης 14.6 MB, χωρίς στοίβα Electron, χωρίς λογαριασμό και χωρίς τηλεμετρία.",
+    "Το Aureole είναι εγγενής επεξεργαστής για Windows, φτιαγμένος με Qt. Ένα αρχείο εγκατάστασης 14.5 MB, χωρίς στοίβα Electron, χωρίς λογαριασμό και χωρίς τηλεμετρία.",
     "Λήψη για Windows", "Διαβάστε την τεκμηρίωση",
     "Θέμα Midnight, έργο επίδειξης. Ο μίνι χάρτης, το τερματικό και το δέντρο αρχείων βρίσκονται στο ίδιο παράθυρο.",
     "Τι περιλαμβάνεται ήδη",
@@ -106,9 +106,9 @@
 
   I.he = pack([
     "תיעוד", "הורדה", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "עורך Python שנפתח לפני שאתם משחררים את העכבר.",
-    "Aureole הוא עורך מקורי ל-Windows שנבנה ב-Qt. קובץ התקנה אחד בגודל 14.6 MB, בלי שכבת Electron, בלי חשבון ובלי טלמטריה.",
+    "Aureole הוא עורך מקורי ל-Windows שנבנה ב-Qt. קובץ התקנה אחד בגודל 14.5 MB, בלי שכבת Electron, בלי חשבון ובלי טלמטריה.",
     "הורדה ל-Windows", "קראו את התיעוד",
     "ערכת Midnight, פרויקט הדגמה. המפה הממוזערת, המסוף ועץ הקבצים נמצאים באותו חלון.",
     "מה כבר נמצא בפנים",
@@ -138,9 +138,9 @@
 
   I.hi = pack([
     "दस्तावेज़", "डाउनलोड", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "ऐसा Python एडिटर जो माउस छोड़ने से पहले खुल जाए.",
-    "Aureole, Qt से बना Windows का नेटिव एडिटर है. एक 14.6 MB की सेटअप फ़ाइल, कोई Electron परत नहीं, कोई खाता नहीं और कोई टेलीमेट्री नहीं.",
+    "Aureole, Qt से बना Windows का नेटिव एडिटर है. एक 14.5 MB की सेटअप फ़ाइल, कोई Electron परत नहीं, कोई खाता नहीं और कोई टेलीमेट्री नहीं.",
     "Windows के लिए डाउनलोड करें", "दस्तावेज़ पढ़ें",
     "Midnight थीम, डेमो प्रोजेक्ट. मिनीमैप, टर्मिनल और फ़ाइल ट्री एक ही विंडो में हैं.",
     "इंस्टॉल में क्या पहले से है",
@@ -170,9 +170,9 @@
 
   I.hu = pack([
     "Dokumentáció", "Letöltés", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Python szerkesztő, ami még az előtt megnyílik, hogy elengednéd az egeret.",
-    "Az Aureole Qt-vel készült natív Windows szerkesztő. Egyetlen 14.6 MB-os telepítő, nincs Electron réteg, nincs fiók és nincs telemetria.",
+    "Az Aureole Qt-vel készült natív Windows szerkesztő. Egyetlen 14.5 MB-os telepítő, nincs Electron réteg, nincs fiók és nincs telemetria.",
     "Letöltés Windowsra", "Dokumentáció megnyitása",
     "Midnight téma, demó projekt. A minitérkép, a terminál és a fájlfa ugyanabban az ablakban van.",
     "Mi van már a csomagban",
@@ -202,9 +202,9 @@
 
   I.id = pack([
     "Dokumentasi", "Unduh", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Editor Python yang terbuka sebelum kamu melepas mouse.",
-    "Aureole adalah editor native Windows yang dibangun dengan Qt. Satu file setup 14.6 MB, tanpa lapisan Electron, tanpa akun, tanpa telemetri.",
+    "Aureole adalah editor native Windows yang dibangun dengan Qt. Satu file setup 14.5 MB, tanpa lapisan Electron, tanpa akun, tanpa telemetri.",
     "Unduh untuk Windows", "Baca dokumentasi",
     "Tema Midnight, proyek demo. Minimap, terminal, dan pohon file ada di jendela yang sama.",
     "Apa saja yang sudah termasuk",
@@ -234,9 +234,9 @@
 
   I.it = pack([
     "Documentazione", "Download", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Un editor Python che si apre prima che tu lasci il mouse.",
-    "Aureole è un editor nativo per Windows scritto con Qt. Un solo installer da 14.6 MB, nessuno strato Electron, nessun account, nessuna telemetria.",
+    "Aureole è un editor nativo per Windows scritto con Qt. Un solo installer da 14.5 MB, nessuno strato Electron, nessun account, nessuna telemetria.",
     "Scarica per Windows", "Leggi la documentazione",
     "Tema Midnight, progetto demo. Minimappa, terminale e albero dei file sono nella stessa finestra.",
     "Cosa c'è già dentro",
@@ -266,9 +266,9 @@
 
   I.ja = pack([
     "ドキュメント", "ダウンロード", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "マウスを離す前に開いている、Python エディタ。",
-    "Aureole は Qt で作った Windows ネイティブのエディタです。14.6 MB のセットアップファイル 1 つ。Electron の層も、アカウントも、テレメトリーもありません。",
+    "Aureole は Qt で作った Windows ネイティブのエディタです。14.5 MB のセットアップファイル 1 つ。Electron の層も、アカウントも、テレメトリーもありません。",
     "Windows 版をダウンロード", "ドキュメントを読む",
     "Midnight テーマ、デモプロジェクト。ミニマップ、ターミナル、ファイルツリーが同じウィンドウにあります。",
     "入っているもの",
@@ -298,9 +298,9 @@
 
   I.ko = pack([
     "문서", "다운로드", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "마우스를 놓기 전에 열리는 Python 에디터.",
-    "Aureole은 Qt로 만든 Windows 네이티브 에디터입니다. 14.6 MB 설치 파일 하나, Electron 계층도, 계정도, 텔레메트리도 없습니다.",
+    "Aureole은 Qt로 만든 Windows 네이티브 에디터입니다. 14.5 MB 설치 파일 하나, Electron 계층도, 계정도, 텔레메트리도 없습니다.",
     "Windows용 다운로드", "문서 보기",
     "Midnight 테마, 데모 프로젝트. 미니맵, 터미널, 파일 트리가 같은 창에 있습니다.",
     "이미 들어 있는 것",

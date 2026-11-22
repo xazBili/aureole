@@ -10,9 +10,9 @@
 
   I.sk = pack([
     "Dokumentácia", "Stiahnuť", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Editor Pythonu, ktorý sa otvorí skôr, než pustíte myš.",
-    "Aureole je natívny editor pre Windows postavený na Qt. Jeden inštalačný súbor s veľkosťou 14.6 MB, žiadna vrstva Electron, žiadny účet a žiadna telemetria.",
+    "Aureole je natívny editor pre Windows postavený na Qt. Jeden inštalačný súbor s veľkosťou 14.5 MB, žiadna vrstva Electron, žiadny účet a žiadna telemetria.",
     "Stiahnuť pre Windows", "Prečítať dokumentáciu",
     "Motív Midnight, demo projekt. Miniatúra kódu, terminál a strom súborov sú v tom istom okne.",
     "Čo už je súčasťou",
@@ -42,9 +42,9 @@
 
   I.sl = pack([
     "Dokumentacija", "Prenos", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Urejevalnik Pythona, ki se odpre, preden spustiš miško.",
-    "Aureole je izvorni urejevalnik za Windows, zgrajen s Qt. Ena namestitvena datoteka velikosti 14.6 MB, brez plasti Electron, brez računa in brez telemetrije.",
+    "Aureole je izvorni urejevalnik za Windows, zgrajen s Qt. Ena namestitvena datoteka velikosti 14.5 MB, brez plasti Electron, brez računa in brez telemetrije.",
     "Prenesi za Windows", "Preberi dokumentacijo",
     "Tema Midnight, predstavitveni projekt. Minizemljevid, terminal in drevo datotek so v istem oknu.",
     "Kaj je že vključeno",
@@ -74,9 +74,9 @@
 
   I.es = pack([
     "Documentación", "Descargar", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Un editor de Python que se abre antes de que sueltes el ratón.",
-    "Aureole es un editor nativo de Windows hecho con Qt. Un solo instalador de 14.6 MB, sin capa Electron, sin cuenta y sin telemetría.",
+    "Aureole es un editor nativo de Windows hecho con Qt. Un solo instalador de 14.5 MB, sin capa Electron, sin cuenta y sin telemetría.",
     "Descargar para Windows", "Leer la documentación",
     "Tema Midnight, proyecto de demostración. El minimapa, la terminal y el árbol de archivos están en la misma ventana.",
     "Lo que ya viene incluido",
@@ -106,9 +106,9 @@
 
   I.sv = pack([
     "Dokumentation", "Ladda ner", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "En Python-redigerare som är öppen innan du släpper musen.",
-    "Aureole är en inbyggd Windows-redigerare byggd med Qt. En enda installationsfil på 14.6 MB, inget Electron-lager, inget konto och ingen telemetri.",
+    "Aureole är en inbyggd Windows-redigerare byggd med Qt. En enda installationsfil på 14.5 MB, inget Electron-lager, inget konto och ingen telemetri.",
     "Ladda ner för Windows", "Läs dokumentationen",
     "Temat Midnight, demoprojekt. Minikartan, terminalen och filträdet ligger i samma fönster.",
     "Det här ingår redan",
@@ -138,9 +138,9 @@
 
   I.th = pack([
     "เอกสาร", "ดาวน์โหลด", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Python editor ที่เปิดขึ้นก่อนคุณปล่อยเมาส์",
-    "Aureole เป็น editor สำหรับ Windows ที่เขียนด้วย Qt ไฟล์ติดตั้งเดียว 14.6 MB ไม่มีชั้น Electron ไม่ต้องมีบัญชี และไม่เก็บข้อมูลการใช้งาน",
+    "Aureole เป็น editor สำหรับ Windows ที่เขียนด้วย Qt ไฟล์ติดตั้งเดียว 14.5 MB ไม่มีชั้น Electron ไม่ต้องมีบัญชี และไม่เก็บข้อมูลการใช้งาน",
     "ดาวน์โหลดสำหรับ Windows", "อ่านเอกสาร",
     "ธีม Midnight โปรเจกต์ตัวอย่าง แผนที่ย่อ เทอร์มินัล และต้นไม้ไฟล์อยู่ในหน้าต่างเดียวกัน",
     "มีอะไรให้แล้วบ้าง",
@@ -170,9 +170,9 @@
 
   I.tr = pack([
     "Belgeler", "İndir", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Fareyi bırakmadan açılan bir Python editörü.",
-    "Aureole, Qt ile yazılmış yerel bir Windows editörü. Tek bir 14.6 MB kurulum dosyası, Electron katmanı yok, hesap yok, telemetri yok.",
+    "Aureole, Qt ile yazılmış yerel bir Windows editörü. Tek bir 14.5 MB kurulum dosyası, Electron katmanı yok, hesap yok, telemetri yok.",
     "Windows için indir", "Belgeleri oku",
     "Midnight teması, demo proje. Mini harita, terminal ve dosya ağacı aynı pencerede.",
     "Kutuda neler var",
@@ -202,9 +202,9 @@
 
   I.uk = pack([
     "Документація", "Завантажити", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Редактор Python, який відкривається раніше, ніж ви відпустите мишу.",
-    "Aureole — нативний редактор для Windows на Qt. Один інсталяційний файл на 14.6 МБ, без шару Electron, без облікового запису й без телеметрії.",
+    "Aureole — нативний редактор для Windows на Qt. Один інсталяційний файл на 14.5 МБ, без шару Electron, без облікового запису й без телеметрії.",
     "Завантажити для Windows", "Читати документацію",
     "Тема Midnight, демо-проєкт. Міні-карта, термінал і дерево файлів в одному вікні.",
     "Що вже входить",
@@ -234,9 +234,9 @@
 
   I.ur = pack([
     "دستاویزات", "ڈاؤن لوڈ", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "ایسا Python ایڈیٹر جو ماؤس چھوڑنے سے پہلے کھل جائے۔",
-    "Aureole ایک نیٹیو Windows ایڈیٹر ہے جو Qt سے بنایا گیا ہے۔ ایک 14.6 MB سیٹ اپ فائل، کوئی Electron پرت نہیں، کوئی اکاؤنٹ نہیں اور کوئی ٹیلی میٹری نہیں۔",
+    "Aureole ایک نیٹیو Windows ایڈیٹر ہے جو Qt سے بنایا گیا ہے۔ ایک 14.5 MB سیٹ اپ فائل، کوئی Electron پرت نہیں، کوئی اکاؤنٹ نہیں اور کوئی ٹیلی میٹری نہیں۔",
     "Windows کے لیے ڈاؤن لوڈ کریں", "دستاویزات پڑھیں",
     "Midnight تھیم، ڈیمو پروجیکٹ۔ منی میپ، ٹرمینل اور فائل ٹری ایک ہی ونڈو میں ہیں۔",
     "پہلے سے کیا موجود ہے",
@@ -266,9 +266,9 @@
 
   I.vi = pack([
     "Tài liệu", "Tải về", "GitHub",
-    "Windows 10 / 11 · x64 · 14.6 MB",
+    "Windows 10 / 11 · x64 · 14.5 MB",
     "Trình soạn thảo Python mở ra trước khi bạn buông chuột.",
-    "Aureole là trình soạn thảo gốc cho Windows, viết bằng Qt. Một tệp cài đặt 14.6 MB, không có lớp Electron, không cần tài khoản và không thu thập dữ liệu.",
+    "Aureole là trình soạn thảo gốc cho Windows, viết bằng Qt. Một tệp cài đặt 14.5 MB, không có lớp Electron, không cần tài khoản và không thu thập dữ liệu.",
     "Tải cho Windows", "Đọc tài liệu",
     "Giao diện Midnight, dự án demo. Bản đồ thu nhỏ, terminal và cây tệp nằm trong cùng một cửa sổ.",
     "Những gì đã có sẵn",

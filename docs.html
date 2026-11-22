@@ -7,7 +7,7 @@
 <meta name="description" content="Aureole 安装、快捷键、设置、运行与调试、终端、文件关联和常见问题。Install, shortcuts, settings, debugging and FAQ.">
 <meta name="theme-color" content="#0b0c14">
 <link rel="icon" href="assets/img/favicon.ico">
-<link rel="stylesheet" href="assets/css/site.css?v=2.0.0">
+<link rel="stylesheet" href="assets/css/site.css?v=2.0.1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -84,7 +84,7 @@
 
       <article class="doc-body" data-doc-lang="zh">
         <h2 id="zh-install">安装</h2>
-        <p>Aureole 2.0.0 的安装包是 <code>AureoleSetup-2.0.0.exe</code>，14.6 MB。系统要求是 64 位 Windows 10（1809 或更新）或 Windows 11。</p>
+        <p>Aureole 2.0.0 的安装包是 <code>AureoleSetup-2.0.0.exe</code>，14.5 MB。系统要求是 64 位 Windows 10（1809 或更新）或 Windows 11。</p>
         <ol>
           <li>双击安装包。向导会先问安装位置，默认是 <code>%LOCALAPPDATA%\Programs\Aureole</code>。</li>
           <li>按默认方式安装时不需要管理员权限，不会弹 UAC。只有选择“为所有用户安装”时才需要。</li>
@@ -92,7 +92,7 @@
         </ol>
         <div class="callout">安装包没有代码签名。如果 Windows 显示“Windows 已保护你的电脑”，点“更多信息”，再点“仍要运行”。</div>
         <figure>
-          <img class="setup-shot" src="assets/img/setup.png" alt="Aureole 安装向导" width="699" height="530" loading="lazy">
+          <img class="setup-shot" src="assets/img/setup.png?v=2.0.1" alt="Aureole 安装向导" width="692" height="529" loading="lazy">
         </figure>
         <h3>卸载</h3>
         <p>打开“设置 → 应用 → 已安装的应用”，找到 Aureole，选择卸载。卸载会删除程序文件和安装时写入的右键菜单、文件关联；你的代码文件不会被删除。</p>
@@ -267,7 +267,7 @@
         <h3>按 Ctrl+F5 提示找不到 python</h3>
         <p>Python 没有加入 PATH。重新运行 Python 安装程序，勾选“Add Python to PATH”，然后关掉 Aureole 再打开，让终端拿到新的环境变量。</p>
         <h3>Windows 提示“已保护你的电脑”</h3>
-        <p>安装包没有购买代码签名证书。点“更多信息”，再点“仍要运行”即可。下载后可以核对文件大小是否为 14,611,698 字节。</p>
+        <p>安装包没有购买代码签名证书。点“更多信息”，再点“仍要运行”即可。下载后可以核对文件大小是否为 14,478,241 字节。</p>
         <h3>双击 .py 文件还是用记事本打开</h3>
         <p>到设置 → 资源管理器，打开“默认文件关联”。如果仍然无效，在 Windows 的“设置 → 应用 → 默认应用”里按扩展名指定 Aureole。</p>
         <h3>改了语言但没有变化</h3>
@@ -287,7 +287,7 @@
 
       <article class="doc-body" data-doc-lang="en" hidden>
         <h2 id="en-install">Install</h2>
-        <p>The installer is <code>AureoleSetup-2.0.0.exe</code>, 14.6 MB. Aureole runs on 64-bit Windows 10 (1809 or newer) and Windows 11.</p>
+        <p>The installer is <code>AureoleSetup-2.0.0.exe</code>, 14.5 MB. Aureole runs on 64-bit Windows 10 (1809 or newer) and Windows 11.</p>
         <ol>
           <li>Run the installer. The wizard asks for a location; the default is <code>%LOCALAPPDATA%\Programs\Aureole</code>.</li>
           <li>Installing for the current user does not need administrator rights and will not trigger a UAC prompt. Only the all-users option does.</li>
@@ -295,7 +295,7 @@
         </ol>
         <div class="callout">The build is not code-signed. If Windows shows "Windows protected your PC", click More info, then Run anyway.</div>
         <figure>
-          <img class="setup-shot" src="assets/img/setup.png" alt="Aureole setup wizard" width="699" height="530" loading="lazy">
+          <img class="setup-shot" src="assets/img/setup.png?v=2.0.1" alt="Aureole setup wizard" width="692" height="529" loading="lazy">
         </figure>
         <h3>Uninstall</h3>
         <p>Open Settings → Apps → Installed apps, find Aureole and choose Uninstall. This removes the program files and the context-menu and file-association entries written during setup. Your source files are left alone.</p>
@@ -470,7 +470,7 @@
         <h3>Ctrl+F5 says python was not found</h3>
         <p>Python is not on PATH. Run the Python installer again, tick "Add Python to PATH", then close and reopen Aureole so the terminal picks up the new environment.</p>
         <h3>Windows says it protected my PC</h3>
-        <p>The installer has no code-signing certificate. Click More info, then Run anyway. You can check the download is complete: the file should be exactly 14,611,698 bytes.</p>
+        <p>The installer has no code-signing certificate. Click More info, then Run anyway. You can check the download is complete: the file should be exactly 14,478,241 bytes.</p>
         <h3>.py files still open in Notepad</h3>
         <p>Go to Settings → Explorer and enable default file associations. If Windows still ignores it, set Aureole per extension under Settings → Apps → Default apps.</p>
         <h3>I changed the language but nothing happened</h3>
@@ -502,7 +502,7 @@
   </div>
 </footer>
 
-<script src="assets/js/config.js?v=2.0.0"></script>
-<script src="assets/js/docs.js?v=2.0.0"></script>
+<script src="assets/js/config.js?v=2.0.1"></script>
+<script src="assets/js/docs.js?v=2.0.1"></script>
 </body>
 </html>

@@ -68,9 +68,9 @@
   window.AUREOLE_I18N = {
     en: pack([
       "Docs", "Download", "GitHub",
-      "Windows 10 / 11 · x64 · 14.6 MB",
+      "Windows 10 / 11 · x64 · 14.5 MB",
       "A Python editor that opens before you let go of the mouse.",
-      "Aureole is a native Windows editor built with Qt. One 14.6 MB setup file, no Electron layer, no account, no telemetry.",
+      "Aureole is a native Windows editor built with Qt. One 14.5 MB setup file, no Electron layer, no account, no telemetry.",
       "Download for Windows", "Read the docs",
       "Midnight theme, demo project. The minimap, terminal and file tree all sit in the same window.",
       "What is already in the box",
@@ -100,9 +100,9 @@
 
     zh_CN: pack([
       "文档", "下载", "GitHub",
-      "Windows 10 / 11 · x64 · 14.6 MB",
+      "Windows 10 / 11 · x64 · 14.5 MB",
       "鼠标还没松开，编辑器已经打开。",
-      "Aureole 是用 Qt 写的原生 Windows 编辑器。一个 14.6 MB 的安装包，没有 Electron 外壳，不用登录，也不收集数据。",
+      "Aureole 是用 Qt 写的原生 Windows 编辑器。一个 14.5 MB 的安装包，没有 Electron 外壳，不用登录，也不收集数据。",
       "下载 Windows 版", "看使用文档",
       "Midnight 主题，演示项目。代码缩略图、终端和文件树都在同一个窗口里。",
       "装了就有这些",
@@ -132,9 +132,9 @@
 
     zh_TW: pack([
       "文件", "下載", "GitHub",
-      "Windows 10 / 11 · x64 · 14.6 MB",
+      "Windows 10 / 11 · x64 · 14.5 MB",
       "滑鼠還沒放開，編輯器已經打開。",
-      "Aureole 是用 Qt 寫的原生 Windows 編輯器。一個 14.6 MB 的安裝檔，沒有 Electron 外層，不用登入，也不收集資料。",
+      "Aureole 是用 Qt 寫的原生 Windows 編輯器。一個 14.5 MB 的安裝檔，沒有 Electron 外層，不用登入，也不收集資料。",
       "下載 Windows 版", "看使用文件",
       "Midnight 主題，示範專案。程式碼縮圖、終端機和檔案樹都在同一個視窗裡。",
       "裝好就有這些",
